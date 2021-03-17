@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/activity_margin"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivCancel"
+            android:layout_alignTop="@+id/ivCancel"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Add New Notification"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivCancel"
+            android:background="@color/text_color_grey_light2" />
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rlOverall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v1"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvOverall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_margin"
+                android:text="OVERALL"
+                android:textSize="@dimen/text_size_extra_large"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/etOverall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/tvOverall"
+                android:textStyle="italic"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginTop="40dp"
+                android:hint="NAME OF NOTIFICATION" />
+
+            <EditText
+                android:id="@+id/etOverallRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:layout_below="@+id/etOverall"
+                android:textStyle="italic"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:layout_marginTop="30dp"
+                android:hint="TOTAL SCORE LESS THAN " />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rlIndividual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v1"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvIndividual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_margin"
+                android:text="INDIVIDUAL"
+                android:textSize="@dimen/text_size_extra_large"
+                android:textStyle="bold"
+
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/tvIndividual"
+                android:id="@+id/rvIndividual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:overScrollMode="never">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSpecific"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v1"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvSpecific"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_margin"
+                android:text="SPECIFIC"
+                android:textSize="@dimen/text_size_extra_large"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/etSpecific"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/tvSpecific"
+                android:textStyle="italic"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginTop="40dp"
+                android:hint="SELECT QUESTION" />
+
+            <EditText
+                android:id="@+id/etSpecificRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:inputType="number"
+                android:layout_below="@+id/etSpecific"
+                android:textStyle="italic"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:layout_marginTop="30dp"
+                android:hint="TOTAL SCORE LESS THAN " />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btAddNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:background="@color/colorPrimaryDark"
+            android:text="ADD NOTIFICATION"
+            android:textColor="@color/text_color_white"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
